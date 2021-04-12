@@ -1,7 +1,7 @@
 /**********************************************************************************
  *
  *  All methods in this class are complete
- *  You need not make any modifications to this file, but you will use several methods in other files!
+ *  You need not make any modifications to this file, but you will use several Body methods in other files!
  *              
  **********************************************************************************/
 import java.util.Scanner;
@@ -22,7 +22,6 @@ public class Body {
     private double fx;      // x force
     private double fy;      // y force
 
-    private boolean reinit = false;     // reinitialized status
     private boolean removed = false;    // removed status
 
 /**********************************************************************************
@@ -104,11 +103,6 @@ public class Body {
         removed = true;
     }
 
-    // update removed status
-    public void reinit() {
-        reinit = true;
-    }
-
     // draw this object using it's rx, ry, and image data
     public void draw() {
         StdDraw.picture(rx, ry, image, size, size);
@@ -149,11 +143,6 @@ public class Body {
     // return removed status
     public boolean isRemoved() {
         return removed;
-    }
-
-    // return reinit status
-    public boolean isReinit() {
-        return reinit;
     }
 
 }

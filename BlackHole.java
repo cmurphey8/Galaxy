@@ -12,16 +12,13 @@ public class BlackHole extends Body {
     public BlackHole(Scanner scan, double R) {
         super(scan, R);
         newImage("blackhole.gif");
-        reinit();
     }
 
     // create and init a new object with an array of input parameters
     public BlackHole(double[] arr, double R) {
         super(arr, R);
         newImage("blackhole.gif");
-        newSize(0.5);
-        reinit();
-        
+        newSize(0.5);   // scale by 0.5 -> black holes are small, dense objects        
     }
 
     // use body force update and then attempt to eat neighbors

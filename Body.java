@@ -40,6 +40,7 @@ public class Body {
         size  = Math.random() * SCALE * R;
     }
 
+    // create and init a new object with input parameters derived from an existing object
     public Body(double[] arr, double R) {
         rx    = arr[0];
         ry    = arr[1];

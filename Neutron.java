@@ -11,7 +11,6 @@ public class Neutron extends Body {
         super(arr, R);
         newImage("neutron.gif");
         newSize(0.5); // scale by 0.5 -> neutron stars are small, dense objects
-        reinit();
     }
 
 }

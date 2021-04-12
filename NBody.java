@@ -4,7 +4,7 @@
  *                Body.java, Star.java, BlackHole.java, Neutron.java, Pulsar.java
  *
  *  N-body simulation.
- *    *  Reads in input .txt file from the command line
+ *    *  Reads in input .txt file
  *    *  Reads in number of bodies N, radius of universe R, initial positions,
  *       velocities, masses, and name of image files from standard input;
  *    *  Simulate the system from time t = 0 until t >= T and plots the
@@ -90,7 +90,7 @@ public class NBody {
                         }    
                     }
                     // reinitialize objects to match their images
-                    if (!object[i].isReinit()) {
+                    if (object[i] instanceof Star) {
                         if (object[i].getImage() == "blackhole.gif") { object[i] = new BlackHole(object[i].params(), R); }
                         if (object[i].getImage() == "neutron.gif") { object[i] = new Neutron(object[i].params(), R); }
                         if (object[i].getImage() == "pulsar.gif") { object[i] = new Pulsar(object[i].params(), R); }    

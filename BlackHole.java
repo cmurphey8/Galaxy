@@ -1,6 +1,6 @@
 /**********************************************************************************
  *
- *  GOAL: Complete the updateF(...) method to add the eat other objects functionality
+ *  GOAL: Complete the updateF(...) and eat(...) methods to add the eat other objects functionality
  *              
  **********************************************************************************/
 import java.util.Scanner;

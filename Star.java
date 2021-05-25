@@ -1,3 +1,4 @@
+
 /**********************************************************************************
  *
  *  GOAL: Complete the step(...) method too add supernove functionality
@@ -24,18 +25,25 @@ public class Star extends Body {
         }
     }
 
-    // use Body step update and then attempt to supernova
-    @Override 
+    // attempt to supernova after Body step update
+    @Override
     public void step(double dt, double R) {
+        // call the Body class step method
         super.step(dt, R);
+
+        // if supernova has started, grow image by scaling factor NOVA_RATE for 10 time steps
         if (startNova) {
-            // TODO: multiply the size of the Star by a growth factor (see NOVA_RATE) for 10 time-steps
-            //       (see novaCount) and then update the image to either a blackhole, a pulsar, 
-            //       or a neutron star depending on the size (see NOVA_GROWTH) of the star:
-            //       top 20% size    -> blackhole
-            //       next 40% size   -> pulsar
-            //       bottom 40% size -> neutron star
+            // check if 10 time steps have passed since nova started
+            if (novaCount == 10) {
+                // TODO: select new object type by updating image -- compare to maxSize scaled by NOVA_GROWTH (size at end of Nova)
+            }
+            // else continue nova process
+            else {
+                newSize(NOVA_RATE);
+                novaCount++;
+            }
         }
+        // else try to start a nova
         else {
             Nova();
         }
